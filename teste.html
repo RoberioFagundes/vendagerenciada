@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/js/vue.min.js"></script>
+    <title>Document</title>
+    <style>
+        .verde{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app">
+       <h3>Titulo texto ajuda</h3>
+       <p @mouseover="exibirTextoAjuda = true" @mouseout="exibirTextoAjuda = false">Exemplo texto</p>
+       <div v-show="exibirTextoAjuda">
+            <h3>Título texto ajuda</h3>
+            <p>Contendo texto ajuda</p>
+       </div>
+    </div>
+    
+    <script>
+        const vm = new Vue({
+         
+              el: '.app',
+              data:{
+                  exibirTextoAjuda: false
+              },
+              methods:{
+              
+              }
+     })
+        
+
+    </script>
+</body>
+</html>
